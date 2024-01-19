@@ -1,6 +1,7 @@
 import { Dosis } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -15,6 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        {" "}
+        <link rel="icon" href="/icon.png"></link>
+      </Head>
       <body className={`${dosis.className} bg-color-dark`}>
         <Navbar />
         {children}

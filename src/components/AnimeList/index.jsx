@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const AnimeList = ({ api }) => {
+const AnimeList = ({ api, index }) => {
   return (
     <>
       <div className="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-2 gap-7 px-4">
@@ -10,6 +10,7 @@ const AnimeList = ({ api }) => {
             <Link
               className="rounded text-color-primary hover:text-color-papaya transition-all"
               href={`/${anime.mal_id}`}
+              key={index}
             >
               <Image
                 src={anime.images.webp.image_url}
