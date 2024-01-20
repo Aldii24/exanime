@@ -21,7 +21,7 @@ const InputSearch = () => {
     <>
       <div className="relative">
         <input
-          className="p-2 border-2 rounded-3xl w-full"
+          className="p-2 outline-color-papaya border-2 rounded-3xl w-full"
           placeholder="cari anime..."
           ref={searchInput}
           onKeyDown={handleInputSearch}
