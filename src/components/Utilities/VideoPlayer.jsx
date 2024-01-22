@@ -4,13 +4,13 @@ import YouTube from "react-youtube";
 
 const VideoPlayer = ({ youtubeId }) => {
   const option = {
-    width: 350,
-    height: 350,
+    width: 340,
+    height: 400,
   };
 
   return (
     <>
-      <div>
+      <div className="flex w-full">
         <YouTube
           onReady={(event) => event.target.pauseVideo()}
           videoId={youtubeId}

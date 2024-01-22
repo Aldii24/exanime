@@ -14,11 +14,11 @@ const Page = async ({ params: { id } }) => {
           {anime.data.title} - {anime.data.year}
         </h3>
       </div>
-      <div className="flex pt-4 px-4 items w-full sm:flex-nowrap gap-2 flex-wrap">
+      <div className="flex pt-4 px-4 items w-full sm:flex-nowrap gap-4 flex-wrap">
         <div className="flex w-full flex-col">
           <Image
             src={anime.data.images.webp.image_url}
-            alt={anime.data.images.jpg.image_ulr}
+            alt="anime"
             width={350}
             height={350}
             className="image-id w-full rounded"
@@ -38,7 +38,9 @@ const Page = async ({ params: { id } }) => {
             </p>
           </div>
         </div>
-        <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
+        <div className="flex">
+          <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
+        </div>
       </div>
       <div className="pt-4 px-4">
         <h3 className="text-color-primary text-xl mb-3 font-bold">

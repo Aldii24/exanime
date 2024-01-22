@@ -17,6 +17,7 @@ const AnimeList = ({ api }) => {
                 alt="anime"
                 width={350}
                 height={250}
+                priority={true}
                 className="rounded"
               />
               <h3 className="md:text-xl text-md font-bold mt-4">
