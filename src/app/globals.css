@@ -17,6 +17,13 @@ img:hover {
     scale: 102%;
 }
 
+.image-id {
+    width: 100%;
+    min-height: 350px;
+    max-height: 400px;
+    height: auto;
+}
+
 .loading {
     width: 100px;
     height: 100px;

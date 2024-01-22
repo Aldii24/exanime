@@ -18,6 +18,7 @@ module.exports = {
         primary: '#fff',
         dark: '#040D12',
         papaya: '#FE7A36',
+        sky: '#0B60B0'
       }
     }
   },

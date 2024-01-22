@@ -1,5 +1,6 @@
 "use client";
 
+import { getAnimeResponse } from "@/app/libs/api-libs";
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 import PaginationSearch from "@/components/Utilities/PaginationSearch";
@@ -13,10 +14,12 @@ const Page = ({ params }) => {
   const [searchAnime, setSearchAnime] = useState([]);
 
   const fetchDataSearch = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${decodedKeyword}&page=${page}`
+    const data = await getAnimeResponse(
+      "anime",
+      `q=${decodedKeyword}`,
+      `page=${page}`
     );
-    const data = await response.json();
+
     setSearchAnime(data);
   };
 
