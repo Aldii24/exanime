@@ -16,9 +16,6 @@ const Pagination = ({ page, lastPage, setPage }) => {
     scrollTop();
   };
 
-  if (page < 1) setPage(1);
-  if (page > lastPage) setPage(lastPage);
-
   return (
     <>
       <div className="p-8">

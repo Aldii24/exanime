@@ -15,7 +15,7 @@ const Page = async ({ params: { id } }) => {
         </h3>
       </div>
       <div className="flex pt-4 px-4 items w-full sm:flex-nowrap gap-4 flex-wrap">
-        <div className="flex w-full flex-col">
+        <div className="flex md:w-96 w-full flex-col">
           <Image
             src={anime.data.images.webp.image_url}
             alt="anime"
@@ -37,7 +37,15 @@ const Page = async ({ params: { id } }) => {
               Favorites #{anime.data.favorites}
             </p>
           </div>
+          
         </div>
+        <Image
+            src={anime.data.images.webp.image_url}
+            alt="anime"
+            width={350}
+            height={350}
+            className="image-id w-full rounded"
+          />
         <div className="flex">
           <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
         </div>
