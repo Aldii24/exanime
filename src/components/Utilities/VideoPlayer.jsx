@@ -30,19 +30,27 @@ const VideoPlayer = ({ youtubeId }) => {
             onReady={(event) => event.target.pauseVideo()}
             videoId={youtubeId}
             opts={option}
+            onError={() =>
+              alert("Videonya lagi rusak bro wkwk, cari yg lain aja. Asal jgn cari Aldi nya :)")
+            }
           />
         </div>
       </>
     );
   };
 
-  return isOpen ? (
-    <Player />
-  ) : (
-    <button className="fixed bottom-3 right-3 w-44 p-2 text-color-primary bg-color-papaya rounded-full font-bold text-xl" onClick={handleVideoPlayer}>
-      Tonton trailer?
-    </button>
-  );
+  const ButtonPlayer = () => {
+    return (
+      <button
+        className="fixed bottom-3 right-3 w-44 p-2 text-color-primary bg-color-papaya rounded-full font-bold text-xl"
+        onClick={handleVideoPlayer}
+      >
+        Tonton trailer?
+      </button>
+    );
+  };
+
+  return isOpen ? <Player /> : <ButtonPlayer />;
 };
 
 export default VideoPlayer;
